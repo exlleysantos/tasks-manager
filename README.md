@@ -1,4 +1,4 @@
-# Adonis API application
+# Task Manager API with AdonisJS
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
 
