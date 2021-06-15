@@ -23,6 +23,14 @@ Run the following command to run startup migrations.
 adonis migration:run
 ```
 
+### Run Project
+
+Run the following command to run project in the developer mode
+
+```js
+adonis serve --dev
+```
+
 ### Anthentication
 
 ```
