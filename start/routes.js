@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,12 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use('Route');
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+	return { greeting: 'Welcome to Tasks Manager' };
+});
+
+Route.get('/users', 'UserController.index');
+Route.post('/users', 'UserController.create');
+Route.get('/users/:id', 'UserController.show');
