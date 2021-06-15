@@ -3,8 +3,10 @@
 const Task = use('App/Models/Task');
 
 class TaskController {
-	async index() {
-		return Task.all();
+	async index({ request }) {
+		const { page } = request.all() || 1;
+
+		return Task.query().paginate(page, 5);
 	}
 
 	async store({ request }) {
