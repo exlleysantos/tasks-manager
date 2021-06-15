@@ -23,6 +23,8 @@ Route.get('/', () => {
 Route.get('/users', 'UserController.index');
 Route.post('/users', 'UserController.store');
 Route.get('/users/:id', 'UserController.show');
+Route.put('/users/:id', 'UserController.update').middleware('auth');
+Route.delete('/users/:id', 'UserController.destroy').middleware('auth');
 
 Route.post('auth', 'AuthController.create');
 
